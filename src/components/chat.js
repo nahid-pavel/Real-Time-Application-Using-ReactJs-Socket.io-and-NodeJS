@@ -87,7 +87,7 @@ const Chat =({currentUser,updateMessage})=>{
         
        
 
-    },[ENDPOINT,username])
+    },[audio,socket,updateMessage,username])
 
     
     const onChangeHandler=(e)=>{

@@ -65,7 +65,7 @@ const Home =({username})=>{
          
           })
 
-    },[])
+    },[audio,socket,username])
     const closeSendMessage=()=>{
         setMessageForSubmit(false);
         setPrivateMessage(false);
