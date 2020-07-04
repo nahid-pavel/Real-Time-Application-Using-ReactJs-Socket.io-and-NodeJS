@@ -85,9 +85,9 @@ const Chat =({currentUser,updateMessage})=>{
     
         });
         
-       
+       // eslint-disable-next-line react-hooks/exhaustive-deps
 
-    },[audio,socket,updateMessage,username])
+    },[)
 
     
     const onChangeHandler=(e)=>{
