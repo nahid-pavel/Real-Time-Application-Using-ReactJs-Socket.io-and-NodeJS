@@ -64,8 +64,8 @@ const Home =({username})=>{
             }
          
           })
-
-    },[audio,socket,username])
+       // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[])
     const closeSendMessage=()=>{
         setMessageForSubmit(false);
         setPrivateMessage(false);
