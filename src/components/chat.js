@@ -21,7 +21,7 @@ const Chat =({currentUser,updateMessage})=>{
 
        
        socket.emit('new-user-joined',username);
-       socket.on('user-joined',(username,socketId)=>{
+       socket.once('user-joined',(username,socketId)=>{
         
         let id = new Date().getHours()+ Math.random();
         
@@ -33,7 +33,7 @@ const Chat =({currentUser,updateMessage})=>{
         });
 
         });
-        socket.on('left',(username)=>{
+        socket.once('left',(username)=>{
         
             let id = new Date().getHours()+ Math.random();
             
@@ -45,7 +45,7 @@ const Chat =({currentUser,updateMessage})=>{
             });
     
         });
-        socket.on('new-message',(name,message,MsgService,msgName)=>{
+        socket.once('new-message',(name,message,MsgService,msgName)=>{
 
             if((MsgService==='private' && msgName === username)||(MsgService==='private'&& name === username)){
                 console.log('mil gaya')
