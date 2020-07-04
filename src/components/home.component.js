@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import {HomeContainer,HeaderContainer,MainContainer} from './home.style';
 import ChatRoom from './chat';
 import Appoinments from './appointenments';
@@ -14,7 +14,7 @@ const Home =({username})=>{
     const [privateMessage,setPrivateMessage] = useState(false);
    
     
-    useEffect(()=>{
+   
         const title = document.querySelector('title');
         let prevTitle = title.textContent;
         
@@ -65,7 +65,7 @@ const Home =({username})=>{
          
           })
        // eslint-disable-next-line
-    },[])
+
     const closeSendMessage=()=>{
         setMessageForSubmit(false);
         setPrivateMessage(false);
