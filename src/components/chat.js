@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React,{useState} from 'react';
 import {HomeContainer,FormContainer} from './chat.style';
 import io from 'socket.io-client';
 import {connect} from 'react-redux';
@@ -17,7 +17,7 @@ const Chat =({currentUser,updateMessage})=>{
     let socket = io(ENDPOINT);
     
 
-    useEffect(()=>{
+  
 
        
        socket.emit('new-user-joined',username);
@@ -85,9 +85,9 @@ const Chat =({currentUser,updateMessage})=>{
     
         });
         
-       // eslint-disable-next-line
+ 
 
-    },[])
+ 
 
     
     const onChangeHandler=(e)=>{
