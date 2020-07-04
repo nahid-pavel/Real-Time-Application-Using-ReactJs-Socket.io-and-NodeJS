@@ -18,7 +18,7 @@ const Home =({username})=>{
         const title = document.querySelector('title');
         let prevTitle = title.textContent;
         
-        socket.on('submit-message',(name,messageSubmit,total_messages)=>{
+        socket.once('submit-message',(name,messageSubmit,total_messages)=>{
             
               if(username === name){
                   audio.play();
@@ -37,7 +37,7 @@ const Home =({username})=>{
            
          })
 
-         socket.on('new-message',(name,message,MsgService,msgName,total_messages)=>{
+         socket.once('new-message',(name,message,MsgService,msgName,total_messages)=>{
             
             if(username === msgName){
                 audio.play();
@@ -55,7 +55,7 @@ const Home =({username})=>{
          })
 
 
-        socket.on('message-close-success',(name)=>{
+        socket.once('message-close-success',(name)=>{
             
             if(username === name){
                
@@ -64,7 +64,7 @@ const Home =({username})=>{
             }
          
           })
-       // eslint-disable-next-line
+       
 
     const closeSendMessage=()=>{
         setMessageForSubmit(false);
